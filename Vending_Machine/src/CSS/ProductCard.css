@@ -1,0 +1,64 @@
+.card{
+    
+    border-radius: 5px;
+    padding: 1vw;
+    height: 25vw;
+    min-width: 20vw;
+    background-color: rgb(234, 238, 238);
+    color: black;
+
+   
+}
+.product-img{
+    height: 55%;
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-name{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-info{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-buy{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-btn
+{
+    border: 1px solid black;
+    color:black;
+    background-color:transparent;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+
+}
+.add-btn:hover
+{
+    background-color: black;
+    transition: all 0.2s ease-in;
+    color: whitesmoke;
+    box-shadow: 0px 0px 5px 1px rgb(9, 13, 39);
+    cursor: pointer;
+    
+
+}
