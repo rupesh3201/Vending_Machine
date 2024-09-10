@@ -1,4 +1,4 @@
-
+// product card
 import PropTypes from 'prop-types';
 import '../CSS/ProductCard.css';
 
