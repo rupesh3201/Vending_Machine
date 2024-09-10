@@ -1,4 +1,4 @@
-
+// product row
 import PropTypes from "prop-types";
 import ProductCard from "./ProductCard";
 import "../CSS/Menu.css";
