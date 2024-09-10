@@ -1,55 +1,33 @@
+
 import "../CSS/Menu.css";
-import ProductCard from "../Components/ProductCard";
+import ProductRow from "../Components/ProductRow";
 
 function Menu() {
-    return (
-        <>
-            <div className="menu-page-container">
-                <div className="menu-heading-div">
-                    <h3>....🙏...</h3>
-                    <h1>Peturam</h1>
-                </div>
-                <div className="menu-product_colletion-div">
-                    <div className="waffers-section-parent">
-                        <div className="waffers-section-name">
-                            <h1>Waffers-Section</h1>
-                        </div>
-                    <div className="waffers-section">
-                      
-                      
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                        <ProductCard/>
-                    </div>
-                    </div>
-                    <div className="noodles-section">
-                       
+  const Sections = [
+    { name: "Chips & Wafers" },  // Example products array
+    { name: "Noodles" },          // Example products array
+    { name: "Chocolate Bars" },   // Example products array
+    { name: "Beverages" }          // Example products array
+  ];
 
-                    </div>
-                    <div className="chocolate-section">
-
-                    </div>
-
-                    <div className="desserts-section">
-                    </div>
-                    <div className="chocolate-section">
-
-                    </div>
-
-                    <div className="desserts-section">
-
-                    </div>
-                    <div className="beverages-section">
-
-                    </div>
-
-                </div>
-            </div>
-        </>);
+  return (
+    <>
+      <div className="menu-page-container">
+        <div className="menu-heading-div">
+          <h3>....🙏...</h3>
+          <h1>Peturam</h1>
+        </div>
+        <div className="menu-product_collection-div">
+          {Sections.map((section) => (
+            <ProductRow
+              sectionName={section.name}
+              key={section.name}
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
+
 export default Menu;
