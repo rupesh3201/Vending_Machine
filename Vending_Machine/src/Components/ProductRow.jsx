@@ -19,13 +19,16 @@ import dairymilkSilk from '../assets/Chocolate Bars/dairymilkSilk.png'
 import kitkat from '../assets/Chocolate Bars/kitkat.png'
 import snickers from '../assets/Chocolate Bars/snickers.png'
 import twix from '../assets/Chocolate Bars/twix.png'
-// import classicCoke from '../assets/Beverages/classicCoke.png';
-// import dietCoke from '../assets/Beverages/dietCoke.png'
-// import espresso from '../assets/Beverages/espresso.png';
-// import fantaCan from '../assets/Beverages/fantaCan.png';
-// import pepsi from '../assets/Beverages/pepsiCan.png';
-// import spritCanpng from '../assets/Beverages/spritCanpng.png';
-// import waterBottle from '../assets/Beverages/waterBottle.png';
+import coke from '../assets/Beverages/classicCoke.png'
+import Ditecoke from '../assets/Beverages/dietCoke.png'
+import espresso from '../assets/Beverages/espresso.png'
+import fantaCan  from '../assets/Beverages/fantaCan.png'
+import  pepsi from '../assets/Beverages/spritCanpng.png'
+import  waterBottle from '../assets/Beverages/waterBottle.png'
+
+
+
+espresso
 const ProductRow = ({ sectionName }) => {
   console.log('sectionName:', sectionName);  // For debugging
 
@@ -57,15 +60,14 @@ const ProductRow = ({ sectionName }) => {
     { imgsrc: twix, name: "Twix", quantity: 10, price: 20 },
   ];
 
-  // const BeveragesAvail = [
-  //   { imgsrc: classicCoke, name: "Classic Coke", quantity: 10, price: 45 },
-  //   { imgsrc: dietCoke, name: "Diet Coke", quantity: 10, price: 60 },
-  //   { imgsrc: espresso, name: "Nestle Espresso", quantity: 10, price: 50 },
-  //   { imgsrc: fantaCan, name: "Fanta Can", quantity: 10, price: 50 },
-  //   { imgsrc: pepsi, name: "Pepsi Classic", quantity: 10, price: 50 },
-  //   { imgsrc: spritCanpng, name: "Sprit Fresh", quantity: 10, price: 50 },
-  //   { imgsrc: waterBottle, name: "Water Bottle", quantity: 10, price: 20 },
-  // ];
+  const BeveragesAvail = [
+    { imgsrc: coke, name: "Classic Coke", quantity: 10, price: 45 },
+    { imgsrc:  Ditecoke , name: "Diet Coke", quantity: 10, price: 60 },
+    { imgsrc: espresso, name: "Nestle Espresso", quantity: 10, price: 50 },
+    { imgsrc: fantaCan, name: "Fanta Can", quantity: 10, price: 50 },
+    { imgsrc:  pepsi , name: "Sprit Fresh", quantity: 10, price: 50 },
+    { imgsrc: waterBottle, name: "Water Bottle", quantity: 10, price: 20 },
+  ];
 
   // Decide which products to display based on sectionName
   let productsToDisplay = [];
@@ -76,9 +78,9 @@ const ProductRow = ({ sectionName }) => {
   } else if (sectionName === "Chocolate Bars") {
     productsToDisplay = ChocolatesAvail;
   }
-  //  else if (sectionName === "Beverages") {
-  //   productsToDisplay = BeveragesAvail;
-  // }
+   else if (sectionName === "Beverages") {
+    productsToDisplay = BeveragesAvail;
+  }
    else {
     // If sectionName does not match, show an empty array or a default message
     console.warn(`Unknown section: ${sectionName}`);
