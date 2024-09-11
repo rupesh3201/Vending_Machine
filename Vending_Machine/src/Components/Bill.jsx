@@ -57,16 +57,20 @@ const Bill = ({ addedItems }) => {
             <input
               type="email"
               required
-              placeholder='Enter email'
+              placeholder='Enter email To Get Bill Copy'
               ref={emailRef}
               className='email-input'
             />
-            <button type='submit' className='completeButton'>
-              Complete payment
-            </button>
+
+            <div className='Btn_container'>
             <button type='button' className='cancleButton' onClick={handleCancleButton}>
               Cancel payment
             </button>
+            <button type='submit' className='completeButton'>
+              Complete payment
+            </button>
+            
+            </div>
           </form>
         </div>
       </div>

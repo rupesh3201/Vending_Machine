@@ -172,6 +172,7 @@
     font-size: 1vw;
     border-radius: 5px;
     border: none;
+    border: 1px solid gray;
 }
 .cancle:hover{
     background-color: blueviolet;
@@ -185,6 +186,7 @@
     cursor: pointer;
     color: black;
     border: none;
+    border: 1px solid gray;
 }
 
 .tobill:hover{
