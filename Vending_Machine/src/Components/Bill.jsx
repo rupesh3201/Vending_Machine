@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import '../CSS/bill.css';
 import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
+//billing component
 
 const Bill = ({ addedItems }) => {
   const navigate3 = useNavigate();
