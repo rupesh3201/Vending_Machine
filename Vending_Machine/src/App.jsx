@@ -3,6 +3,7 @@ import Welcome from './Pages/Welcome';
 import Menu from './Pages/Menu';
 import BillingPage  from './Pages/BillingPage';
 import './App.css'
+// app jsx
 
 function App() {
  
