@@ -4,6 +4,7 @@ import ProductRow from "../Components/ProductRow";
 import { RiShoppingBasketLine } from "react-icons/ri";
 import { FaArrowLeft } from "react-icons/fa";
 import AddedCard from "./../Components/AddedCard";
+import { useNavigate } from "react-router-dom";
 
 function Menu() {
   const Sections = [
@@ -12,6 +13,10 @@ function Menu() {
     { name: "Chocolate Bars" },   // Example products array
     { name: "Beverages" }          // Example products array
   ];
+  const navigate = useNavigate();
+  const handlePayment = () => {
+    navigate("/billing");
+  };
 
 const [cartVisibility,setCartVisibility]=useState(0);
 
@@ -75,8 +80,8 @@ const [cartVisibility,setCartVisibility]=useState(0);
               <h4>Rs.100</h4>
             </div>
             <div className="cancleProceedDiv">
-              <button className="cancle"><h4>Cancle orders</h4></button>
-              <button className="tobill"><h4>Proceed to payment</h4></button>
+              <button className="cancle" ><h4>Cancle orders</h4></button>
+              <button className="tobill" onClick={handlePayment}><h4>Proceed to payment</h4></button>
             </div>
         </div>
       </div>

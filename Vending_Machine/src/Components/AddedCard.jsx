@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import "../CSS/ProductCard.css";
+import "../CSS/addedCard.css"
 import toast, { Toaster } from "react-hot-toast";
 
 function ProductCard({ product }) {
