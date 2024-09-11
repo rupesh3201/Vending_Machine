@@ -7,31 +7,27 @@ import cheetosCheese from '../assets/Chips&Wafers/cheetosCheese.png';
 import cheetosCrunchy from '../assets/Chips&Wafers/cheetosCrunchy.png';
 import doritosCheese from '../assets/Chips&Wafers/doritosCheese.png';
 import laysSaltAndVinegar from '../assets/Chips&Wafers/laysSaltAndVinegar.png';
-import chickenNoodleSoup from '../assets/Noodles/chickenNoodleSoup.png';
-import knorrChatt from '../assets/Noodles/knorrChatt.png';
-import koreanRamen from '../assets/Noodles/koreanRamen.png';
-import maggieClassic from '../assets/Noodles/maggieClassic.png';
-import maggieCuppa from '../assets/Noodles/maggieCuppa.png';
-import yippeeNoodles from '../assets/Noodles/yippeeNoodles.png';
-import star from '../assets/Chocolate Bars/5star.png'
-import dairymilk from '../assets/Chocolate Bars/dairymilk.png'
-import dairymilkSilk from '../assets/Chocolate Bars/dairymilkSilk.png'
-import kitkat from '../assets/Chocolate Bars/kitkat.png'
-import snickers from '../assets/Chocolate Bars/snickers.png'
-import twix from '../assets/Chocolate Bars/twix.png'
-import coke from '../assets/Beverages/classicCoke.png'
-import Ditecoke from '../assets/Beverages/dietCoke.png'
-import espresso from '../assets/Beverages/espresso.png'
-import fantaCan  from '../assets/Beverages/fantaCan.png'
-import  pepsi from '../assets/Beverages/spritCanpng.png'
-import  waterBottle from '../assets/Beverages/waterBottle.png'
+import chickenNoodleSoup from '../Assets/Noodles/chickenNoodleSoup.png';
+import knorrChatt from '../Assets/Noodles/knorrChatt.png';
+import koreanRamen from '../Assets/Noodles/koreanRamen.png';
+import maggieClassic from '../Assets/Noodles/maggieClassic.png';
+import maggieCuppa from '../Assets/Noodles/maggieCuppa.png';
+import yippeeNoodles from '../Assets/Noodles/yippeeNoodles.png';
+import star from '../Assets/Chocolate Bars/5star.png';
+import dairymilk from '../Assets/Chocolate Bars/dairymilk.png';
+import dairymilkSilk from '../Assets/Chocolate Bars/dairymilkSilk.png';
+import kitkat from '../Assets/Chocolate Bars/kitkat.png';
+import snickers from '../Assets/Chocolate Bars/snickers.png';
+import twix from '../Assets/Chocolate Bars/twix.png';
+import classicCoke from '../Assets/Beverages/classicCoke.png';
+import dietCoke from '../Assets/Beverages/dietCoke.png';
+import espresso from '../Assets/Beverages/espresso.png';
+import fantaCan from '../Assets/Beverages/fantaCan.png';
+import pepsi from '../Assets/Beverages/pepsiCan.png';
+import spritCanpng from '../Assets/Beverages/spritCanpng.png';
+import waterBottle from '../Assets/Beverages/waterBottle.png';
 
-
-
-espresso
-const ProductRow = ({ sectionName }) => {
-  console.log('sectionName:', sectionName);  // For debugging
-
+const ProductRow = ({ sectionName, handleAddItem }) => {
   // Available products for each section
   const ChipsAvail = [
     { imgsrc: laysSalted, name: "Lays Salted", quantity: 10, price: 10 },
@@ -48,7 +44,7 @@ const ProductRow = ({ sectionName }) => {
     { imgsrc: maggieClassic, name: "Maggie Classic", quantity: 10, price: 15 },
     { imgsrc: maggieCuppa, name: "Maggie Cuppa Noodles", quantity: 10, price: 40 },
     { imgsrc: chickenNoodleSoup, name: "Knorr Chicken Noodle Soup", quantity: 40, price: 10 },
-    { imgsrc: yippeeNoodles, name: "Yippee Classic", quantity: 10, price: 15 },
+    { imgsrc: yippeeNoodles, name: "Yippee Classic", quantity: 10, price: 15 }
   ];
 
   const ChocolatesAvail = [
@@ -61,12 +57,13 @@ const ProductRow = ({ sectionName }) => {
   ];
 
   const BeveragesAvail = [
-    { imgsrc: coke, name: "Classic Coke", quantity: 10, price: 45 },
-    { imgsrc:  Ditecoke , name: "Diet Coke", quantity: 10, price: 60 },
+    { imgsrc: classicCoke, name: "Classic Coke", quantity: 10, price: 45 },
+    { imgsrc: dietCoke, name: "Diet Coke", quantity: 10, price: 60 },
     { imgsrc: espresso, name: "Nestle Espresso", quantity: 10, price: 50 },
     { imgsrc: fantaCan, name: "Fanta Can", quantity: 10, price: 50 },
-    { imgsrc:  pepsi , name: "Sprit Fresh", quantity: 10, price: 50 },
-    { imgsrc: waterBottle, name: "Water Bottle", quantity: 10, price: 20 },
+    { imgsrc: pepsi, name: "Pepsi Classic", quantity: 10, price: 50 },
+    { imgsrc: spritCanpng, name: "Sprit Fresh", quantity: 10, price: 50 },
+    { imgsrc: waterBottle, name: "Water Bottle", quantity: 10, price: 20 }
   ];
 
   // Decide which products to display based on sectionName
@@ -77,14 +74,8 @@ const ProductRow = ({ sectionName }) => {
     productsToDisplay = NoodlesAvail;
   } else if (sectionName === "Chocolate Bars") {
     productsToDisplay = ChocolatesAvail;
-  }
-   else if (sectionName === "Beverages") {
+  } else if (sectionName === "Beverages") {
     productsToDisplay = BeveragesAvail;
-  }
-   else {
-    // If sectionName does not match, show an empty array or a default message
-    console.warn(`Unknown section: ${sectionName}`);
-    productsToDisplay = []; // Default to an empty array
   }
 
   return (
@@ -93,20 +84,18 @@ const ProductRow = ({ sectionName }) => {
         <h3>{sectionName}</h3>
       </div>
       <div className="product-view-section">
-        {productsToDisplay.length > 0 ? (
-          productsToDisplay.map((product, index) => (
-            <ProductCard key={index} product={product} />
-          ))
-        ) : (
-          <p>No products available for this section.</p>
-        )}
+        {productsToDisplay.map((product, index) => (
+          <ProductCard key={index} product={product} handleAddItem={handleAddItem} />
+        ))}
       </div>
     </div>
   );
 };
 
+// PropTypes for ProductRow
 ProductRow.propTypes = {
   sectionName: PropTypes.string.isRequired,
+  handleAddItem: PropTypes.func.isRequired
 };
 
 export default ProductRow;
