@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import "../CSS/ProductCard.css";
 import toast, { Toaster } from "react-hot-toast";
-
+// ProductCard
 function ProductCard({ product, handleAddItem }) {
   const handleAddClick = () => {
     const item = {
