@@ -14,7 +14,12 @@ const Bill = ({ addedItems }) => {
     const email = emailRef.current.value; // Access the value using the ref
     console.log(email);
     console.log(addedItems);
-    toast.success('Order Completed');
+    navigate3("/thanks");
+    toast.success('Order Placed Sucessful')
+   
+ 
+   
+  
   };
 
   const handleCancleButton = () => {
@@ -29,7 +34,7 @@ const Bill = ({ addedItems }) => {
     <div className='bill-page'>
       <div className='bill-container'>
         <div className='company-heading'>
-          <h1 className='heading'>Peturam</h1>
+          <h1 className='heading'>Peturam🍽️</h1>
         </div>
         <hr className='line' />
 
@@ -57,7 +62,7 @@ const Bill = ({ addedItems }) => {
             <input
               type="email"
               required
-              placeholder='Enter email To Get Bill Copy'
+              placeholder='Enter Email To Get Invoice'
               ref={emailRef}
               className='email-input'
             />
