@@ -26,7 +26,7 @@ import fantaCan from '../Assets/Beverages/fantaCan.png';
 import pepsi from '../Assets/Beverages/pepsiCan.png';
 import spritCanpng from '../Assets/Beverages/spritCanpng.png';
 import waterBottle from '../Assets/Beverages/waterBottle.png';
-
+// Product Row componet 
 const ProductRow = ({ sectionName, handleAddItem }) => {
   // Available products for each section
   const ChipsAvail = [
