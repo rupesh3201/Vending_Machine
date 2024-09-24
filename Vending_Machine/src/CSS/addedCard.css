@@ -13,3 +13,79 @@
 .addedItemImage{
     max-width: 3vw;
 }
+/* making it responsive */
+@media screen and (max-width:480px) {
+   
+    .content-container{
+       
+        font-size: 15px;
+        
+    }
+    .ProceedButton{
+        /* display: none; */
+        min-height: 30px;
+        font-size: 12px;  
+    }
+   
+
+}
+@media screen and (min-width:481px) and (max-width:621px) 
+{
+    .content-container{
+       
+        font-size: 18px;
+        
+    }
+    .ProceedButton{
+        /* display: none; */
+        min-height: 30px;
+        font-size: 14px;  
+    }
+   
+
+}
+
+
+@media screen and (min-width:622px) and (max-width:950px) {
+    .content-container{
+       
+        font-size: 22px;
+        
+    }
+    .ProceedButton{
+        /* display: none; */
+        min-height: 30px;
+        font-size: 16px;  
+    }
+   
+
+  
+}   
+
+
+@media screen and (min-width:951px) and (max-width:1200px) {
+    .content-container{
+       
+        font-size: 25px;
+        
+    }
+    .ProceedButton{
+        /* display: none; */
+        min-height: 30px;
+        font-size: 18px;  
+    }
+}   
+@media screen and (min-width:1201px) and (max-width:1400px)
+{
+    .content-container{
+       
+        font-size: 25px;
+        
+    }
+    .ProceedButton{
+        /* display: none; */
+        min-height: 30px;
+        font-size: 18px;  
+    }
+
+}

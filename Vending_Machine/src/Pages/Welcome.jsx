@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "../CSS/Welcome.css";
 
+
 function Welcome() {
   const navigate = useNavigate();
   const handleProceed = () => {
@@ -19,5 +20,6 @@ function Welcome() {
       </div>
     </>
   );
+
 }
 export default Welcome;

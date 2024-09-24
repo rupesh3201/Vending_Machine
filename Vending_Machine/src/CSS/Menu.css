@@ -209,3 +209,170 @@
     font-weight: bolder;
     top: 30%;
 }
+
+/* making it responsive */
+@media screen and (max-width:480px) {
+    .menu-heading-div h1{
+        color: orangered;
+        font-size: 7vw;
+    }
+    
+.shopping-cart{
+    width: 6vw;
+    height: 6vw;
+    font-size: 3vw;
+
+}
+.product-view-section 
+{
+    gap: 15px;
+}
+.itemsCounter{
+    left: -30%;
+    width: 3.5vw;
+    height: 3.5vw;
+    top: 20%;
+}
+.itemsCounter h4
+{
+    font-size: 1px;
+}
+.emptydiv{
+    margin-top: -40px;
+}
+.product-section-name h3{
+font-size: 16px;
+}
+
+
+.showing-items-section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-height: 80px;
+    /* border: 2px solid white; */
+    /* background-color: white; */
+    margin-top: 4vw;
+    padding: 1vw;
+    overflow: auto;
+}
+.something{
+    font-size: 10px;
+}
+.produt-image{
+    width: 30px;
+    height: 30px;
+}
+.product-view-section {
+    padding: 1vw;
+    display: flex;
+    overflow-x: auto;
+    gap: 1vw;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+.product-view-section::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+.showing-items-section{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-height: 70%;
+    /* border: 2px solid white; */
+    /* background-color: white; */
+    margin-top: 4vw;
+    padding: 1vw;
+    overflow: auto;
+}
+}
+@media screen and (min-width:481px) and (max-width:621px) 
+{
+    .menu-heading-div h1{
+        color: orangered;
+        font-size: 6vw;
+    }
+    
+.shopping-cart{
+    width: 5vw;
+    height: 5vw;
+    font-size: 3vw;
+    right: 10px;
+
+
+}
+.product-view-section 
+{
+    gap: 10px;
+}
+.itemsCounter{
+    left: -30%;
+    width: 3vw;
+    height: 3vw;
+    top: 22%;
+}
+.itemsCounter h4
+{
+    font-size: 1px;
+}
+.emptydiv{
+    margin-top: -40px;
+}
+.product-section-name h3{
+font-size: 16px;
+}
+
+
+
+}
+
+
+@media screen and (min-width:622px) and (max-width:950px) {
+
+    
+    .menu-heading-div h1{
+        color: orangered;
+        font-size: 5vw;
+    }
+    
+.shopping-cart{
+    width: 5vw;
+    height: 5vw;
+    font-size: 3vw;
+    right: 10px;
+
+
+}
+.product-view-section 
+{
+    gap: 10px;
+}
+.itemsCounter{
+    left: -30%;
+    width: 3vw;
+    height: 3vw;
+    top: 22%;
+}
+.itemsCounter h4
+{
+    font-size: 1px;
+}
+.emptydiv{
+    margin-top: -40px;
+}
+.product-section-name h3{
+font-size: 16px;
+}
+
+
+
+  
+}   
+
+
+@media screen and (min-width:951px) and (max-width:1200px) {
+  
+}   
