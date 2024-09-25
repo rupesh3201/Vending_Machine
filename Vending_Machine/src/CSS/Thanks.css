@@ -195,7 +195,7 @@ body{
         color: orangered;
     }
     .content-container h4:hover{
-        color:blue;
+        color: blueviolet;
     }
     .vendingmachine
     {
@@ -215,8 +215,8 @@ body{
 
     }
     .ProceedButton:hover{
-        border:2px solid blue;
-        color: blue;
+        border:2px solid  blueviolet;
+        color:  blueviolet;
         cursor: pointer;
     }
     
